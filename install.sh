@@ -11,19 +11,19 @@
 clear
 
 ## Check The Router Hardware Model
-MODEL=$(cat /proc/xiaoqiang/model)
+#MODEL=$(cat /proc/xiaoqiang/model)
 LUAPATH="/usr/lib/lua/luci"
 WEBPATH="/www/xiaoqiang/web"
 VERSIONPATH="/usr/share/xiaoqiang"
 
 MOUNTFILESPATH="/tmp/langmod/tmp"
 
-if [ "$MODEL" == "R3P" -o "$MODEL" == "R3G" -o "$MODEL" == "R3D"]; then
-  echo "Supported Model ($MODEL)"
-else
-  echo "Unsupported Model"
-  exit
-fi
+#if [ "$MODEL" == "R3P" -o "$MODEL" == "R3G" -o "$MODEL" == "R3D"]; then
+#  echo "Supported Model ($MODEL)"
+#else
+#  echo "Unsupported Model"
+#  exit
+#fi
 
 if [ ! -f /etc/langmod/.installed ]; then
   echo -n "You sure you to continue? Ctrl-C to cancel. Any key to continue."
